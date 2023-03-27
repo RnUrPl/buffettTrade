@@ -105,6 +105,10 @@ $('.offer__btn').ready(function() {
 // Partners slider
 
 const swiper = new Swiper('.sample-slider', {
+  centeredSlides:true,
+  infinite:true,
+  width: 150,
+  spaceBetween: 36,
     loop: true,
     speed: 6000,
     slidesPerView: 5,      
@@ -123,18 +127,28 @@ $('.team-slider').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   responsive: [
-    // {
-    //   breakpoint: 992,
-    //   settings: {
-    //     slidesToShow: 2
-    //   }
-    // },
+    {
+      breakpoint: 1250,
+      settings: {
+        arrows:false,
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        arrows:false,
+        slidesToShow: 2
+      }
+    },
     {
       breakpoint: 768,
       settings: {
         arrows:false,
+        arrows:false,
         slidesToShow: 1,
-        centerMode:true
+        // centerMode:true,
+        // infinite:true,
       }
     },
   ]
@@ -193,9 +207,9 @@ $('.students-slider').slick({
   infinite:false,
   initialSlide: 1, // set starting slide index to 1 (second slide)
 cssEase: 'linear',
-arrows:false,
-// prevArrow: "<i class='icon-arrow prev'></i>",
-// nextArrow: "<i class='icon-arrow next'></i>",
+// arrows:false,
+prevArrow: "<i class='icon-arrow prev'></i>",
+nextArrow: "<i class='icon-arrow next'></i>",
 
 slidesToShow: 1,
 slidesToScroll: 1,
